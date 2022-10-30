@@ -2,7 +2,7 @@ package DesignPatterns.Factory3;
 
 public class SingleFactoryShape {
 
-    public SingleShape getSingleShape(ShapeInfo shapeType) {
+    public static SingleShape getSingleShape(ShapeInfo shapeType) {
         if (shapeType == ShapeInfo.CIRCLE) {
             return new SingleCircle();
         }

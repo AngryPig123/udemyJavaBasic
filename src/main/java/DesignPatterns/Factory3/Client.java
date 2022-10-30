@@ -1,10 +1,11 @@
 package DesignPatterns.Factory3;
 
+import static DesignPatterns.Factory3.SingleFactoryShape.getSingleShape;
+
 public class Client {
     public static void main(String[] args) {
-        new SingleFactoryShape().getSingleShape(ShapeInfo.CIRCLE).draw();
-        new SingleFactoryShape().getSingleShape(ShapeInfo.RECTANGLE).draw();
-        new SingleFactoryShape().getSingleShape(ShapeInfo.SQUARE).draw();
-
+        getSingleShape(ShapeInfo.CIRCLE).draw();
+        getSingleShape(ShapeInfo.RECTANGLE).draw();
+        getSingleShape(ShapeInfo.SQUARE).draw();
     }
 }
