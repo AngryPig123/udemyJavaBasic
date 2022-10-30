@@ -1,4 +1,4 @@
-package DesignPatterns.Factory;
+package DesignPatterns.Factory1;
 
 public class SquareFactory extends AbstractShapeFactory {
 
