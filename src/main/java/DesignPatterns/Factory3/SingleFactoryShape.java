@@ -2,23 +2,17 @@ package DesignPatterns.Factory3;
 
 public class SingleFactoryShape {
 
-    public SingleShape getSingleShape(String shapeType) {
-
-        if (shapeType.equalsIgnoreCase(ShapeInfo.CIRCLE.name())) {
+    public SingleShape getSingleShape(ShapeInfo shapeType) {
+        if (shapeType == ShapeInfo.CIRCLE) {
             return new SingleCircle();
         }
-
-        if (shapeType.equalsIgnoreCase(ShapeInfo.RECTANGLE.name())) {
+        if (shapeType == ShapeInfo.RECTANGLE) {
             return new SingleRectangle();
         }
-
-        if (shapeType.equalsIgnoreCase(ShapeInfo.SQUARE.name())) {
+        if (shapeType == ShapeInfo.SQUARE) {
             return new SingleSquare();
         }
-
         throw new NullPointerException();
-
     }
-
 
 }
