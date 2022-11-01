@@ -2,22 +2,18 @@ package DesignPatterns.FactoryPattern.Challenge;
 
 public class ChallengeFactory {
 
-
     public static ChallengeAnimal getAnimal(ChallengeAnimalInfo animal) {
 
-        if (animal == ChallengeAnimalInfo.DOG) {
-            return new ChallengeDog();
+        switch (animal) {
+            case CAT:
+                return new ChallengeCat();
+            case DOG:
+                return new ChallengeDog();
+            case MONKY:
+                return new ChallengeMonky();
+            default:
+                throw new IllegalStateException("Unexpected value: " + animal);
         }
-
-        if (animal == ChallengeAnimalInfo.CAT) {
-            return new ChallengeCat();
-        }
-
-        if (animal == ChallengeAnimalInfo.MONKY) {
-            return new ChallengeMonky();
-        }
-
-        throw new RuntimeException("해당하는 동물이 없습니다!");
     }
 
 }

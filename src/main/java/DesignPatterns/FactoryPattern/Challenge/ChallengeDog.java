@@ -5,4 +5,9 @@ public class ChallengeDog implements ChallengeAnimal{
     public void shout() {
         System.out.println("Dog!!");
     }
+
+    @Override
+    public String animalName() {
+        return ChallengeAnimalInfo.DOG.name();
+    }
 }
