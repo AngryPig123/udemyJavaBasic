@@ -8,7 +8,7 @@ public class Factory {
     private Shape shape;
     private Color color;
 
-    public Factory(Shape shape, Color color) {
+    protected Factory(Shape shape, Color color) {
         this.shape = shape;
         this.color = color;
     }
