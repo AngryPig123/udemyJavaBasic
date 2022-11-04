@@ -14,7 +14,7 @@ class LazyInitializationTest {
         instance1.setData(30);
         System.out.println(instance1);
 
-        instance1 = null;
+
         instance1 = LazyInitialization.getInstance();
         System.out.println(instance1);
 
